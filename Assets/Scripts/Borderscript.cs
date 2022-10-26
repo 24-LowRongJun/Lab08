@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Borderscript : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class Borderscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (score == 10)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
     public void OnTriggerEnter(Collider other)
     {

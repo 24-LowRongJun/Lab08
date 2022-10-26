@@ -21,12 +21,17 @@ public class Player : MonoBehaviour
 
         transform.position = transform.position + new Vector3(0 , verticalInput * speed * Time.deltaTime, 0);
 
-        if(transform.position.y <= -3 || transform.position.y >= 5  )
+        if(transform.position.y <= -3 )
         {
-            //transform.position = new Vector3(-8.19f, -0.128f, 0.008284654f);
+            transform.position = new Vector3(-8.19f, -3.0f, 0.008284654f);
         }
+        if (transform.position.y >= 5.3 )
+        {
+            transform.position = new Vector3(-8.19f, 5.3f, 0.008284654f);
+        }
+        
 
-      
+
 
     }
     public void OnCollisionEnter(Collision collision)
